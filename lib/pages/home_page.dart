@@ -4,6 +4,8 @@ import '../data/user_data.dart';
 import 'profile_page.dart';
 import 'settings_page.dart';
 import 'friend_page.dart';
+import 'dream_storage_page.dart';
+import 'dream_journal_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -80,7 +82,14 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xFFB89CFF),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const DreamJournalPage(),
+            ),
+          );
+        },
         child: const Icon(
           Icons.add,
           color: Colors.white,
